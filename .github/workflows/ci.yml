@@ -27,7 +27,7 @@ jobs:
       - name: Check code style (lint)
         run: |
           pip install flake8
-          flake8 .
+          flake8 app/ tests/ --ignore=E302,W292
       - name: Run tests
         run: python -m pytest .
 

@@ -30,7 +30,7 @@ jobs:
           flake8 app/
 
       - name: Run tests
-        run: pytest tests/
+        run: python -m pytest tests/
 
   # JOB 2: Build and Push Docker image
   build-docker:

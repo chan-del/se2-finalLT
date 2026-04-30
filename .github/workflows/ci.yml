@@ -28,8 +28,9 @@ jobs:
 
       # Step 3: Install your packages (pip install)
       - name: Install dependencies
-        run: pip install -r requirements.txt
-             pip install flake8
+        run: |
+          pip install -r requirements.txt
+          pip install flake8
 
       # Step 4: Check code style
       - name: Check code style (lint)

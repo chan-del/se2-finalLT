@@ -38,7 +38,9 @@ jobs:
 
       # Step 5: Run tests
       - name: Run tests
-        run: pytest tests/
+        run: |
+         export PYTHONPATH=$PYTHONPATH:$(pwd)
+         pytest tests/
 
   # This job runs AFTER "check-code" passes
   build-docker:

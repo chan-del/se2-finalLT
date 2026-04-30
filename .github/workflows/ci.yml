@@ -29,7 +29,8 @@ jobs:
           pip install flake8
           flake8 app/ tests/ --ignore=E302,W292
       - name: Run tests
-        run: python -m pytest .
+        run: pip install pytest
+          python -m pytest .
 
   # JOB 2: Build and Push Docker image
   build-docker:

@@ -27,10 +27,9 @@ jobs:
       - name: Check code style (lint)
         run: |
           pip install flake8
-          flake8 app/
-
+          flake8 .
       - name: Run tests
-        run: python -m pytest tests/
+        run: python -m pytest .
 
   # JOB 2: Build and Push Docker image
   build-docker:
